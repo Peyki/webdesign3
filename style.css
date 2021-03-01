@@ -1,0 +1,179 @@
+body {
+    font-family: 'Asap', sans-serif;
+    background-color: #EBEBEB;
+    color: white;
+
+}
+
+/* Global view aka Desktop view */
+
+.container {
+    min-height: 500px;
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex; /* parents container oldugu icin buraya yazmamis gerekiyor */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 140px;
+}
+
+.header-container {
+    background-color:rgb(60, 57, 57) ;
+    min-height:100px ;
+    
+    position: fixed; /* Nav button kismini sayfaya sabitledik boylelikle scroll down and up yaparken sayfada gozukecek, kaybo mayacak.  */
+     width: 100%;  /*navbuttonu sayfaya sabitlemek icin witdh gerekiyor.  */
+
+}
+
+header {
+    min-height: 100px;
+    /* background-color: blueviolet;  */
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+   
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    
+}
+.navbutton {
+    border: 1px solid white;
+    padding: 11px 25px;
+    margin-left: 10px;    
+
+}
+
+.highlight {
+    font-weight: 700;
+}
+
+
+.col {
+    /* background-color: hotpink;  */
+    /* min-height: 200px;  bu satir ve color satirini structure kullanirken olusturduk. boylelikle kutularin yerlerini boyutlarini daha iyi anladik ama kutulara resimleri koymaya baslayinca bunlari kaldirmamiz gerekiyor cunku arkadan pembe renk gorunuyor. Artik ihtiyacimiz kalmadi*/
+    width:30%; 
+    margin-bottom: 40px;
+    background-color: lightgreen;    
+    /* Bu renk her kutucugun kendisi icin tamamen arka plan icin degil  */
+
+ 
+}
+
+
+
+.hide-desktop-only {
+    display: none;
+
+}
+
+.col img {
+
+    width: 100%;    
+    /* width 100% yaptik cunku kutucugu tamamen doldurmasini istiyoruz */
+    height: auto;
+}
+
+.col p {
+    font-size: 0.8rem;
+    padding: 20px 25px;
+    line-height: 1.25rem;
+}
+
+
+.col p::first-line {
+    font-weight: bold;
+}
+ 
+.mob-wrapper {
+
+    display: none;
+}
+
+ /* Tablet view */
+ @media (max-width: 786px) {
+
+.col {
+    width: 45%;
+    
+}
+
+.hide-desktop-only {
+    display: block;
+
+}
+
+
+.header-container {
+   position: relative;
+}
+
+.container {
+   padding-top:40px;
+}
+nav {
+    display:none;
+}
+
+nav a {
+
+   display: block;
+}    
+
+.logo {
+    padding: 40px 0;
+}
+
+ .navbutton {  /* hocanin kodlarinda mybutton olarak geciyor. bende ki tam tersi.*/
+
+   margin-left: 0;
+}
+
+.mob-wrapper {
+    display: block;
+    padding-right: 30px;
+}
+
+.mob-nav {
+    display: none;
+    position: absolute;
+    padding-top: 10px;
+}
+
+.mybutton {   /* hocanin kodlarinda navbutton olarak var*/
+    display: block;
+    background-color: orange;
+    padding: 15px 30px;
+     margin-left: -70px; /*  position absolute oldugu icin negatif margin kullanmamiz gerekir */
+     text-align: center;
+}
+
+}
+
+ /* Mobile view */
+ @media (max-width: 500px) {
+     /* Normalde mobile phonelarda 400px uygun fakat pcde o kadar kuculme olmuyor o yuzden 500px yazip deneyerek gorecegiz. */
+
+     .col {
+        width: 100%;
+    }
+    
+    
+    
+.hide-mobile {
+    display: none;
+
+}
+
+     }
+
+   
+
+  
+    
